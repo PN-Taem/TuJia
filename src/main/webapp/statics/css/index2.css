@@ -1,0 +1,71 @@
+#notification-trigger {
+			width: 200px;
+			height: 40px;
+			background-color: rgb(225, 102, 0);
+			color: white;
+		}
+		
+		body {
+			background-image: url(../img/body01.jpg);
+		}
+		
+		.p1 {
+			height: 35px;
+			width: 40px;
+			color: white;
+			background-color: #3492ED;
+			line-height: 40px;
+			text-align: center;
+			display: inline-block;
+			margin-top: -12px;
+			margin-left: -58px;
+		}
+		
+		#in {
+			position: relative;
+			top: 250px;
+			left: 600px;
+		}
+		
+		#tou {
+			width: 500px;
+			height: 500px;
+			background-color: black;
+			opacity: 0.7;
+			float: left;
+		}
+		
+		#div2 {
+			float: left;
+			position: relative;
+			left: -400px;
+			top: 100px;
+		}
+		
+		#div1 {
+			margin-left: 500px;
+			margin-top: 40px;
+		}
+		
+		#imgone {
+			margin-left: 570px;
+		}
+		
+		input {
+			margin-top: 20px;
+			margin-left: 50px;
+		}
+		
+		#id1 {
+			color: white;
+		}
+		
+		#yan {
+			margin-top: 10px;
+		}
+		#fh{
+			margin-left: 150px;
+		}
+		#notification-trigger{
+			border: none;
+		}

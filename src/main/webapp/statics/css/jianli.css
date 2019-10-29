@@ -1,0 +1,166 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color:#EEEEEE ;
+}
+#head{
+	width: 75%;
+	height: 90px;
+	background-color: white;
+	margin-left: 13%;
+}
+#img1{
+	float: left;
+	margin-left: 30px;
+	margin-top: 15px ;
+}
+#headnei{
+	float: left;
+	margin-left:550px;
+	margin-top: 30px;
+}
+#lift{
+	float: left;
+	display: inline-block;
+	background-color: #F6F6F6;
+	margin-left: 14%;
+	margin-top: 20px;
+}
+#lift ul li{
+	
+	list-style: none;
+	height: 50px;
+	width: 160px;
+	font-size: 16px;
+	text-align: center;
+}
+#tou{
+	display: inline-block;
+	margin-top: 20px;
+	width: 150px;
+	text-align: center;
+	height: 39px;
+	
+}
+#tou img{
+	float: left;
+	margin-left: 43px;
+	border: 0px solid black;
+	width: 100px;
+	text-align: center;
+}
+
+#lift ul li:first-child{
+	border: 0px solid red;
+	height: 40px;
+}
+#lift ul li:nth-of-type(2){
+	background-image: url(../img/profilechoose.gif);
+	background-repeat: no-repeat;
+}
+
+#lift ul li:nth-of-type(2) a{
+	display: inline-block;
+	height: 31px;
+	padding-top: 6px;
+	
+}
+#zhu{
+	float: left;
+	background-color: white;
+	width: 59%;
+	height: auto;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: auto;
+}
+#zhu span img {
+	float: left;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+#zhu mei{
+	float: left;
+	display: inline-block;
+	
+	width: 740px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 30px;
+	text-align: center;
+	padding-top: 60px;
+	background-color: #F6F6F6;
+}
+#zhu a{
+	float: left;
+	border-top: 1px dashed gray;
+	margin-top: 50px;
+	color: #64A8E3; 
+	margin-left: 30px;
+	width: 740px;
+	text-align: center;
+}
+#zhu ul li {
+	list-style: none;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+#zhu ul {
+	list-style: none;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+#weiw{
+	float: left;
+	margin-left: -340px;
+	margin-top: 80px;
+}
+#sp img{
+		
+	width: 740px;
+	margin-top: -20px;
+}
+#sp{
+	float: left;
+	margin-top: -26px;
+	margin-left: 5px;
+}
+#weiwy{
+	float: left;
+	margin-left:30px;
+	margin-top: 20px;
+}
+#spy img{
+		
+	width: 740px;
+	margin-top: -20px;
+}
+#spy{
+	border: 0px solid red;
+	float: left;
+	margin-top: -26px;
+	margin-left: 5px;
+}
+#yx{
+	border: 0px solid red;
+	margin-top: -30px;
+}
+#weiwb{
+	float: left;
+	margin-left:30px;
+	margin-top: 20px;
+}
+#spb img{
+		
+	width: 740px;
+	margin-top: -20px;
+}
+#spb{
+	border: 0px solid red;
+	float: left;
+	margin-top: -26px;
+	margin-left: 5px;
+}

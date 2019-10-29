@@ -1,0 +1,98 @@
+* {
+				margin: 0px;
+				padding: 0px;
+			}
+		
+			#bei img {
+				float: left;
+				width: 100%;
+				height: 99%;
+				margin-top: -40px;
+				border: 0px solid red;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				bottom: 0px;
+				right: 0px;
+			}
+			
+			#xia {
+				position: absolute;
+				top: 550px;
+				float: left;
+				display: inline-block;
+				background-color: #452A1A;
+				height: 170px;
+				width: 100%;
+				border-top: 10px solid #ED6D01;
+				z-index: 1;
+				
+			}
+			
+			#login {
+				float: left;
+				margin-top: 50px;
+				margin-left: 110px;
+			}
+			#xia ul{
+				float: left;
+				margin-left: 140px;
+			}
+			
+			#xia ul li {
+				float: left;
+				list-style: none;
+				color: white;
+				width: 130px;
+				margin-top: 60px;
+				margin-left: 20px;
+				cursor: pointer;
+				border-right: 1px solid #573F31;
+				text-indent: 50px;
+			}
+			#xia ul li:nth-of-type(1){
+				width: 100px;
+			}
+			#xia ul li a{
+				font-size: 18px;
+			}
+			#xia ul li p{
+				font-size: 12px;
+			}
+			#xia ul li a{
+			color: white;
+			text-decoration: none;
+			}
+			#deng {
+				height: 40px;
+				border: 0px solid #ED6D01;
+				background-color: #ED6D01;
+				width: 120px;
+				border-radius: 50px;
+			}
+			
+			
+			
+			#dong {
+				position: absolute;
+				top: -18%;
+				left: 485px;
+			}
+			#lian{
+				display: inline-block;
+				margin-left: 80px;
+				margin-top: 60px;
+				width: 120px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				background-color: #ED6D01;
+				border-radius: 20px;
+				color: white;
+				font-size: 14px;
+			}
+			#lian a:hover{
+				cursor: pointer;
+				color:black ;
+			}
+			

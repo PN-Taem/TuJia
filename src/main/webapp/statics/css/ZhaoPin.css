@@ -1,0 +1,271 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+#header01 {
+	width: 100%;
+	height: 70px;
+	border: solid 0px black;
+	background-color: #411F0E;
+}
+#header {
+	width: 100%;
+	height: 270px;
+	border: solid 0px black;
+}
+.herimg1 {
+	margin-top: 17px;
+	margin-left: 100px;
+}
+
+.herimg2,.herimg3,.herimg4,.herimg5 {
+	margin-right: 10px;
+	width: 40px;
+	height: 30px;
+	color: white;
+	margin-top: -40px;
+}
+
+.heaimg {
+	margin-left: 300px;
+	margin-top: -40px;
+}
+.heaimg a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin-top: 20px;
+}
+a {
+	float: left;
+	height: 20px;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+.img2 {
+	width: 100%;
+	height: 200px;
+	border-top: 3px solid coral;
+	background: url(css/dierg.jpg) no-repeat center;
+}
+
+.zuida1 {
+	width: 100%;
+	margin: 0px auto;
+	clear: both background:  url(css/bj.png) repeat-y center top;
+}
+
+.zuida2 {
+	width: 1200px;
+	margin: 0px auto;
+	/*border: 1px solid black;*/
+	margin-top: 20px;
+}
+
+.zuida3 { /*border: 1px solid #eee;*/
+	background: #fff;
+	padding: 30px 40px;
+}
+
+#yourId {
+	display: inline-block;
+	position: relative;
+	line-height: 35px;
+	width: 210px;
+	height: 35px;
+	padding-left: 10px;
+	background: #fff;
+	color: #777;
+	font-size: 12px;
+	text-align: left;
+	text-transform: uppercase;
+	outline: 0;
+	outline-offset: -2px;
+	cursor: default;
+	float: left;
+	margin-right: 15px;
+	border: 1px solid #e1e1e1;
+	font-size: 14px;
+}
+
+#yourId2 {
+	display: inline-block;
+	position: relative;
+	line-height: 35px;
+	width: 210px;
+	height: 35px;
+	padding-left: 10px;
+	background: #fff;
+	color: #777;
+	font-size: 12px;
+	text-align: left;
+	text-transform: uppercase;
+	outline: 0;
+	outline-offset: -2px;
+	cursor: default;
+	float: left;
+	margin-right: 15px;
+	border: 1px solid #e1e1e1;
+	font-size: 14px;
+}
+
+.sousuo {
+	float: left;
+	width: 100px;
+	border: none;
+	height: 35px;
+	background: #ed6d01;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.zuida4 {
+	clear: both;
+	padding-bottom: 20px;
+	overflow: hidden;
+	/* border: 1px solid aquamarine;*/
+}
+
+.zuida5 {
+	margin: 0px;
+	padding: 0px;
+	/*border: 1px solid blue;*/
+}
+
+.zuida6 {
+	border: *px solid #cecece;
+	background: #fff1cf;
+	line-height: 70px;
+	font-weight: normal;
+	color: #ed6d01;
+	font-size: 15px;
+	height: 50px;
+}
+
+.di1 {
+	display: inline-block;
+	width: 240px;
+	padding-left: 35px;
+	float: left;
+	font-weight: bold;
+}
+
+.di2 {
+	display: inline-block;
+	width: 250px;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+}
+
+.di3 {
+	display: inline-block;
+	width: 220px;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+}
+
+.di4 {
+	display: inline-block;
+	width: 160px;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+	height: 50px;
+}
+
+.di5 {
+	display: inline-block;
+	width: 210px;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+}
+
+.quanju { /*border: 1px solid blueviolet;*/
+	clear: both;
+	height: 0px;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	border: none;
+	overflow: hidden;
+}
+
+.zuida7 { /*	border: 1px solid chartreuse;*/
+	line-height: 50px;
+	font-size: 15px;
+	color: #666;
+	cursor: pointer
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	border-bottom: 1px dashed #CECECE;
+}
+
+.limian { /*border: 1px solid #000000;*/
+	background: #f6f6f6;
+	padding: 20px 30px 0 45px;
+	margin: 0 30px 40px;
+	position: relative;
+	display: none
+}
+
+.limian1 { /*border: 1px solid #0000FF;*/
+	line-height: 30px;
+	color: #666;
+	font-size: 14px;
+	padding-bottom: 25px;
+}
+
+.di6 { /*border: 1px solid darkgreen;*/
+	display: inline-block;
+	color: #505356;
+	padding-bottom: 20px;
+	font-weight: bold
+}
+
+.limian2 { /*border:  1px solid brown;*/
+	
+}
+
+.lij {
+	background: #ff552e;
+	display: inline-block;
+	width: 110px;
+	height: 35px;
+	line-height: 35px;
+	color: #FFFFFF;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+ol li {
+	display: inline-block;
+	width: 220px;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+	height: 50px;
+}
+
+.zuida6 li {
+	margin-top: -10px;
+}
+
+* {
+	border: 0px solid black;
+}

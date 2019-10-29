@@ -1,0 +1,94 @@
+*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.wei{
+				width: 100%;
+				height: 100%;
+				/*border: 1px solid saddlebrown;*/
+			    background:  #D8DBE0;
+			    
+			}
+			.wei1{
+				/*border: 1px solid salmon;*/
+				width: 1200px;
+				height: 80px;
+				background: white;
+				margin:0 auto;  /*居中*/
+			}
+			.tup{
+				/*border: 1px solid #000000;*/
+				width: 400px;
+				height: 80px;
+			}
+			.tup img{
+				margin-top: 10px;
+			}
+			.zit{
+				/*border: 1px solid black;*/
+				width: 480px;
+				height: 80px;
+				float: right;
+				margin-top: -83px;
+			}
+			a:link, a:visited, a:active {
+    		color: #64a8dc;
+    		text-decoration: none;
+		}
+		.gg{
+			font-style: normal;
+    		height: 12px;
+    		color: #bcbcbc;
+    		padding: 0 5px;
+		}
+			 .zit1{
+			 	margin-top: 30px;
+			 }
+			 .wei2{
+				border: 1px solid  white;
+				width: 1000px;
+				height: 700px;
+				background: white;
+				margin:0 auto;  /*居中*/
+				margin-top: 30px;
+			}
+			 .tup1{
+			 	/*border: 1px solid black;*/
+			 	height: 200px;
+			 	border-bottom: 1px dashed #CECECE;
+			 	margin-top: 100px;
+			 	
+			 }
+			 .an{
+			 	/*border: 1px solid #00008B;*/
+			 	width: 800px;
+			 	float: right;
+			 	margin-right: -20px;
+			 }
+			 .tishi{
+			 	/*border: 1px solid #00008B;*/
+			 	width: 500px;
+			 	color: #aaa;
+			 	
+			 }
+			 .wezi{
+			 	width: 270px;
+			 }
+			 .an1{
+			 	width: 60px;
+			 }
+			 .an3{
+			 	text-align: center;
+			 	margin-top: 20px;
+			 	font-size: 30px;
+			 	font-weight: bold;
+			 }
+			 .an4{
+			 	width: 200px;
+			 	height: 100px;
+			 	/*border: 1px solid #CECECE;*/
+			 }
+			 .tup1 img{
+			 	/*border: 1px solid #000000;*/
+			 	margin-left: 30px;
+			 }

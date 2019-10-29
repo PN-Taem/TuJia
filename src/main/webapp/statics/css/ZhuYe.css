@@ -1,0 +1,156 @@
+#header {
+	width: 100%;
+	height: 270px;
+	border: solid 0px black;
+}
+
+#header01 {
+	width: 100%;
+	height: 70px;
+	border: solid 0px black;
+	background-color: #411F0E;
+}
+
+#header02 {
+	width: 100%;
+	height: 200px;
+	border: solid 0px black;
+	background: url(../img/pn-30.jpg) -300px;
+}
+
+.herimg1 {
+	margin-top: 17px;
+	margin-left: 100px;
+}
+
+.herimg2,.herimg3,.herimg4,.herimg5 {
+	margin-right: 10px;
+	width: 40px;
+	height: 30px;
+	color: white;
+	margin-top: -40px;
+}
+
+.heaimg {
+	margin-left: 300px;
+	margin-top: -40px;
+}
+
+.heaimg a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+#Ye {
+	width: 100%;
+	height: 125r0px;
+	r border: solid 0px black;
+	margin-top: 5px;
+}
+
+#lan {
+	width: 700px;
+	height: 60px;
+	border: solid 0px black;
+}
+
+#lan a {
+	width: 130px;
+	height: 45px;
+	border: 0px solid black;
+	float: left;
+	text-align: center;
+	background: url(img/pn-1.png) -1px -1px;
+	border-radius: 20px;
+	text-decoration: none;
+	padding-top: 10px;
+	color: white;
+	font-weight: bold;
+}
+
+a {
+	float: left;
+	height: 20px;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+
+#nei1,#nei2,#nei3 {
+	background-color: #F4F4F4;
+	margin-top: 20px;
+}
+
+#nei1 {
+	width: 100%;
+	height: 600px;
+	border: solid 0px black;
+}
+
+#nei3 {
+	width: 100%;
+	height: 900px;
+	border: solid 0px orange;
+	padding-top: 40px;
+}
+
+.img2 {
+	float: left;
+	vertical-align: top;
+}
+
+p {
+	line-height: 35px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.img1,.img2,.img3 {
+	margin-left: 60px;
+	border: 0px solid black;
+	margin-top: 20px;
+}
+
+.img5 {
+	margin-left: 320px;
+	border: 0px solid black;
+	margin-top: 40px;
+}
+
+#img24 {
+	margin-top: 40px;
+	margin-left: 320px;
+}
+
+#img25 {
+	margin-left: 320px;
+}
+
+#img26 {
+	width: 1000px;
+	height: 403px;
+	border: 0px solid black;
+	margin-top: 0px;
+	margin-left: 170px;
+	background: url(../img/pn-20.jpg);
+}
+
+#img27 {
+	width: 1000px;
+	height: 362px;
+	border: 0px solid black;
+	margin-top: 50px;
+	margin-left: 170px;
+	background: url(../img/pn-05.png);
+}
+
+#img25 img:hover {
+	transform: scale(1.2);
+	box-shadow: 0px 0px 20px #B5B9B8;
+}
+
+#img24 img:hover {
+	transform: scale(1.2);
+	box-shadow: 0px 0px 20px #B5B9B8;
+}

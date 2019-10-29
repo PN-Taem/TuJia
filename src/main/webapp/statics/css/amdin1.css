@@ -1,0 +1,145 @@
+#active {
+			width: 1200px;
+			height: 100px;
+			border: 1px solid rgb(209, 209, 209);
+			margin: 0 auto;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		#div2 {
+			width: 150px;
+			height: 400px;
+			border: 1px solid rgb(209, 209, 209);
+			margin-top: 15px;
+			margin-left: 164px;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		#div3 {
+			width: 1010px;
+			height: 560px;
+			border: 1px solid rgb(209, 209, 209);
+			margin-left: 330px;
+			margin-top: -402px;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		#div4 {
+			width: 1060px;
+			height: 40px;
+			border: 0px solid rgb(209, 209, 209);
+			margin-top: 30px;
+			margin-left: 250px;
+			background-color: rgb(255, 255, 255);
+			background-color: rgb(244, 244, 244);
+			text-align: center;
+		}
+		
+		* {
+			margin-top: 0px;
+			background-color: rgb(238, 238, 238);
+		}
+		
+		#img1 {
+			margin-top: 20px;
+			margin-left: 30px;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		a {
+			color: rgb(100, 168, 220);
+			text-decoration: none;
+			background-color: rgb(255, 255, 255);
+			margin: 10px;
+		}
+		
+		#table1 {
+			margin-left: 880px;
+			margin-top: -45px;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		#div2 {
+			color: rgb(101, 101, 101);
+		}
+		
+		#p1 {
+			margin-left: 35px;
+			margin-top: 20px;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		td {
+			background-color: rgb(255, 255, 255);
+		}
+		
+		ul {
+			background-color: rgb(255, 255, 255);
+		}
+		
+		li {
+			margin: 5px;
+			list-style-type: none;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		#table2 {
+			margin-left: 0px;
+			margin-top: 40px;
+			padding-left: 15px;
+		}
+		
+		#table2 li {
+			margin-top: 10px;
+		}
+		
+		#img3 {
+			margin-top: -460px;
+			margin-left: 380px;
+			float: left;
+		}
+		
+		#img2 {
+			margin-top: -530px;
+			margin-left: 370Px;
+			float: left;
+		}
+		
+		.one {
+			margin-top: 100px;
+			margin-left: 220px;
+		}
+		
+		.tow {
+			margin-left: 220px;
+			margin-top: 10px;
+		}
+		
+		#submit {
+			margin-left: 400px;
+			margin-top: 30px;
+		}
+		
+		#div233 {
+			opacity: 0.5;
+			margin-left: 270px;
+			margin-top: 20px;
+			background-color: rgb(255, 255, 255);
+		}
+		
+		hr {
+			width: 570px;
+		}
+		
+		#post1 {
+			background-color: white;
+			margin-left: 220px;
+			margin-top: 20px;
+		}
+		
+		.div5 {
+			border: 1px dashed rgb(204, 204, 204);
+			width: 900px;
+			margin-left: 45px;
+			margin-top: 50px;
+		}
