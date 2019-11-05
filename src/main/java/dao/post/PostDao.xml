@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.post.PostDao">
+
+
+    <select id="selectType" resultType="Post">
+
+SELECT p.`postid`,p.`postname`,
+IF(p.`typeThreeId`=12,w.`name`,t.`name`)AS typeName,
+p.`describe`,p.`postrecruit`,p.`posttime`,
+p.`request`,p.`typeOneId`,p.`typeTwoId`,
+p.`typeThreeId`,a.name as address
+FROM post AS p,typeone AS o,address AS a,
+typetwo AS w,typethree AS t
+WHERE p.`typeOneId`=o.`id`
+AND p.`typeTwoId`=w.`id` AND p.`typeThreeId`=t.`id`
+AND p.address=a.id
+    </select>
+
+
+    <select id="getPostCount" resultType="int">
+SELECT COUNT(*)
+FROM post AS p,typeone AS o,typetwo AS w,typethree AS t
+WHERE p.`typeOneId`=o.`id` AND p.`typeTwoId`=w.`id` AND p.`typeThreeId`=t.`id`
+
+    </select>
+</mapper>

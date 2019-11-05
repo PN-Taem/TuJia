@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
@@ -13,7 +13,7 @@
 <head>
 <meta charset="utf-8" />
 <title>途家项目</title>
-<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
 
 <script type="text/javascript">
 			$(function(){
@@ -42,29 +42,29 @@
 			});
 		</script>
 
-<link rel="stylesheet" href="css/ZhaoPin.css" type="text/css"></link>
-<script type="text/javascript" src="js/sweetalert.min.js"></script></head>
+<link rel="stylesheet" href="/statics/css/ZhaoPin.css" type="text/css"></link>
+<script type="text/javascript" src="/statics/js/sweetalert.min.js"></script></head>
 <body>
 	
 
 	<div id="toup">
-	<div style="background-color:411F0E;border:0px solid white;width:100px;height:40px; float: left;position: relative;left:189;top:15;">
+	<div style="background-color:#411F0E;border:0px solid white;width:100px;height:40px; float: left;position: relative;left:189px;top:15px;">
 	
 	</div>	
 	
 	<div id="header01">
-				<img src="img/pn-31.png" width="130px" height="35px" class="herimg1" style="margin-left: 0px"/>
+				<img src="/statics/img/pn-31.png" width="130px" height="35px" class="herimg1" style="margin-left: 0px"/>
 				<div class="heaimg">
-					<a href="shouye.jsp"><img src="img/pn-282.png" class="herimg2"/>首页</a>
-				    <a href="PostServlet"><img src="img/pn-272.png" class="herimg3"/>社会招聘</a>
-				    <a href=""><img src="img/pn-252.png" class="herimg4"/>校园招聘</a>
-				    <a href="ZhuYe.jsp"><img src="img/pn-292.png" class="herimg5"/>了解我们</a>
+					<a href="shouye.jsp"><img src="/statics/img/pn-282.png" class="herimg2"/>首页</a>
+				    <a href="PostServlet"><img src="/statics/img/pn-272.png" class="herimg3"/>社会招聘</a>
+				    <a href=""><img src="/statics/img/pn-252.png" class="herimg4"/>校园招聘</a>
+				    <a href="ZhuYe.jsp"><img src="/statics/img/pn-292.png" class="herimg5"/>了解我们</a>
 				</div>
 			</div>
 	
 	</div>
 	<div class="img2" >
-		<img src="img/dierg.jpg" width="100%"></img>
+		<img src="/statics/img/dierg.jpg" width="100%"></img>
 	</div>
 	<div class="zuida1" style="border:0px solid black;">
 		<div class="zuida2">
@@ -101,7 +101,7 @@
 						</ol>
 
 					</h1>
-					<c:forEach items="${posts.yings}" var="po">
+					<c:forEach items="${postList}" var="po">
 						<ul>
 							<li>
 								<h1 class="zuida7">
