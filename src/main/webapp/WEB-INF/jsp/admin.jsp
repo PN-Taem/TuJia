@@ -8,7 +8,7 @@
   <script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
   		<script type="text/javascript">
   		$(function(){
-  		$("#zhuce").click(function(){
+  		$("#login").click(function(){
   		var name=$("input[name='name']").val();
   		var pwd=$("input[name='passWord']").val();
   		if (""==name||name==null) {
@@ -41,14 +41,14 @@
 			<div id="body_form">
 				<br /><br /><br /><br />
 				<h2 style="color: #475966;text-indent: 90px;">管理员登录</h2><br />
-				 <form action="UserServlet?opr=login" method="post" id="Myform">
+				 <form action="" method="post" id="Myform">
 				<span>用户名</span><br/><input type="text" name="name" placeholder="请输入用户名"/>
 				<br/><br />
 				<span>密码</span><br/><input type="password" name="passWord" placeholder="请输入密码"/>
 				<br/>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<br />
-				<input type="button" value="登录" id="zhuce"/>
+				<input type="button" value="登录" id="login"/>
 		 </form>
 			</div>
 		</div>

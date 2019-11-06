@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("login")
-public class loginController {
+public class LoginController {
     @RequestMapping(value = "/login")
     private String login(){
         return "login";

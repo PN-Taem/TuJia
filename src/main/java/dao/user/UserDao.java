@@ -2,6 +2,7 @@ package dao.user;
 
 import entity.User;
 
+
 public interface UserDao {
 	int inserJianLi(User uer);
 
