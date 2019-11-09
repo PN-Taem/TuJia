@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
     @RequestMapping(value = "/login")
     private String login(){
-        return "login";
+        return "dz";
     }
 }

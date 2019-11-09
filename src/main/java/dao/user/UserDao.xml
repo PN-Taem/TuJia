@@ -6,7 +6,8 @@
 <select id="getUserByPhone" resultType="User" parameterType="String">
 select * from `user` where phone=#{phone}
 </select>
-
-
+<insert id="addUser" parameterType="user">
+        INSERT INTO `user`(phone,pwd,email) VALUES(#{user.phone},#{user.pwd},#{user.email})
+</insert>
 
 </mapper>

@@ -1,6 +1,7 @@
 package dao.user;
 
 import entity.User;
+import org.apache.ibatis.annotations.Param;
 
 
 public interface UserDao {
@@ -8,7 +9,7 @@ public interface UserDao {
 
 	User getUserByPhone(String phone);
 
-	int addUser(User user);
+	int addUser(@Param("user") User user);
 	
 	int updeteuser(User user);
 	

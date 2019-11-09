@@ -73,7 +73,7 @@
 			<c:otherwise>
 			<a id="d" class="da" href="/user/login.html" style="text-decoration: none;">登录</a>
 				&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a id="z" class="da"href="add.jsp" style="text-decoration: none;">注册</a>
+			<a id="z" class="da"href="/user/add.html" style="text-decoration: none;">注册</a>
 			</c:otherwise>
 			</c:choose>
 				

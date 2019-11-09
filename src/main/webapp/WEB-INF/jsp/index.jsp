@@ -5,6 +5,7 @@
 <html>
   <head>
     <title>登录</title>
+	  <script type="text/javascript" src="/statics/js/sweetalert.min.js"></script>
   <script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
   				<script type="text/javascript">
 			var TEL_phone = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
@@ -15,11 +16,11 @@
 
 					check();
 			});
-			
+
 			$("input").focus(function(){
 				$(".sp").css("display","none")
 			});
-			
+
 			$("input[name='phone']").focusout(function(){
 				if (!TEL_phone.test($(this).val())) {
 					$("#sp_phone").css("display","block");
@@ -30,7 +31,7 @@
 					$("#sp_pwd").css("display","block");
 				}
 			});
-			
+
 			function check(){
 				var phone=$("input[name='phone']").val();
 				var passWord=$("input[name='passWord']").val();
@@ -46,7 +47,7 @@
 				}
 				$.post("/user/doLogin",{"phone":phone,"passWord":passWord},function(data){
 					if(data==false){
-						alert("用户名或密码错误！");
+						swal("用户名或密码错误！");
 						falg=false;
 					}else if(data==true){
 						falg=true;
@@ -55,12 +56,9 @@
 				},"json");
 			}
 			});
-			
-			
 		</script>
-  <link rel="stylesheet" href="/statics/css/add.css" type="text/css">
-  </link></head>
-  
+  <link rel="stylesheet" href="/statics/css/add.css" type="text/css"/></head>
+
  <body>
 		<header>
 			<div id="head_tou">
@@ -71,7 +69,7 @@
 					<li><a href="add.jsp">注册</a></li>
 				</ul>
 			</div>
-			
+
 		</header>
 		<div id="body_cen" style="height:500px;margin-top:50px "><br /><br />
 		<br />
@@ -86,7 +84,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<br />
 				<input type="button" value="登录" id="zhuce"/>
-		</form>
+
 			</div>
 		</div>
 	</body>

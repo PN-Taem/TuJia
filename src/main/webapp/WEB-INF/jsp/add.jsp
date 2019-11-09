@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false" %>
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -15,14 +15,14 @@
 			var flag=true;
 			$("input[name='phone']").focusout(function(){
 		     var phone=$(this).val();
-				$.get("UserServlet?phone="+phone,null,function(data){
-					if (data=='true') {
+				$.post("/user/dophone",{"phone":phone},function(data){
+					if (data==false) {
 					flag=false;
 					swal("提示", "手机号已被注册", "error");
 					}else{
 					flag=true;
-					}
-				})
+				}
+				},"json");
 			})
 			
 				$("#Myform").submit(function(){
@@ -81,7 +81,7 @@
 				
 			
 		</script>
-	<link rel="stylesheet" href="css/add.css" type="text/css"></link>
+	<link rel="stylesheet" href="/statics/css/add.css" type="text/css"></link>
 	<script type="text/javascript" src="/statics/js/sweetalert.min.js"></script></head>
 	<body>
 		<header>
@@ -93,13 +93,12 @@
 					<li><a href="add.jsp">注册</a></li>
 				</ul>
 			</div>
-			
 		</header>
 		<div id="body_cen" style="margin-top:30px "><br /><br />
 			<div id="body_form" style="height:500px;margin-top:10px ">
 				<br /><br />
 				<h2 style="color: #475966;text-indent: 40px;">手机号注册</h2><br />
-				<form action="UserServlet?opr=add" method="post" id="Myform">
+				<form action="/user/dozhuce" method="post" id="Myform">
 				<span>手机号</span><br/><input type="text" name="phone" placeholder="请输入手机号"/>
 				<span class="sp" id="sp_phone">手机号格式不正确</span><br/>
 				<span>密码</span><br/><input type="password" name="passWord" />
