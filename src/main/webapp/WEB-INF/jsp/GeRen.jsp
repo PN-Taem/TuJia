@@ -78,7 +78,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="geren">
 			<div class="geren1" >
 				<div class="tup2">
-					<img src="img/tuptb.png" />
+					<img src="/statics/img/tuptb.png" />
 				</div>
 				<div class="geren2">
 					   <div class="geren3">
@@ -118,25 +118,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<td class="td1" align="center">
 								<ul class="diul1">
 									<li class="dili1">
-								    <img src="img/dl_basic.gif" style="margin-top:-120px;"/>
+								    <img src="/statics/img/dl_basic.gif" style="margin-top:-120px;"/>
 										<a href="#" >
 											<span class="zit4">1基本信息</span>
 										</a>
 									</li>
 									
 									<li class="dili2">
-									<img src="img/dl_greyarrow.gif" style="margin-top:-120px;"/>
+									<img src="/statics/img/dl_greyarrow.gif" style="margin-top:-120px;"/>
 									</li>
 									<li class=" dili3">
-									 <img src="img/dl_profile-grey.gif" style="margin-top:-120px;"/>
+									 <img src="/statics/img/dl_profile-grey.gif" style="margin-top:-120px;"/>
 										<a href="#" >
 											<span class="zit5">2个人履历</span>
 										</a>
 									</li>
 									<li class="dili2">
-									<img src="img/dl_greyarrow.gif" style="margin-top:-120px;"/></li>
+									<img src="/statics/img/dl_greyarrow.gif" style="margin-top:-120px;"/></li>
 									<li class="dili4">
-									<img src="img/dl_submit-grey.gif" style="margin-top:-120px;"/>
+									<img src="/statics/img/dl_submit-grey.gif" style="margin-top:-120px;"/>
 										<a href="#" >
 											<span class="zit6">3预览/提交</span>
 										</a>
@@ -219,7 +219,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					
 					
 					<div class="tup3">
-						<img src="img/shang.png"  id="imgs" style="display: block;width: 150px;height: 170px;"/>
+						<img src="/statics/img/shang.png"  id="imgs" style="display: block;width: 150px;height: 170px;"/>
 						<br />
 						
 						<input type="file" id="url" style="width: 70px;" value="上传图片"/>

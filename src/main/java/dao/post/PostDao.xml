@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.post.PostDao">
+
+    <select id="selectType" resultType="Post">
+SELECT p.`postid`,p.`postname`,
+IF(p.`typeThreeId`=12,w.`name`,t.`name`)AS typeName,
+p.`describe`,p.`postrecruit`,p.`posttime`,
+p.`request`,p.`typeOneId`,p.`typeTwoId`,
+p.`typeThreeId`,a.name as address
+FROM post AS p,typeone AS o,address AS a,
+typetwo AS w,typethree AS t
+WHERE p.`typeOneId`=o.`id`
+ AND p.`typeTwoId`=w.`id` AND p.`typeThreeId`=t.`id`
+ AND p.address=a.id
+    </select>
+
+
+    <select id="getPostCount" resultType="int">
+SELECT COUNT(*)
+FROM post AS p,typeone AS o,typetwo AS w,typethree AS t
+WHERE p.`typeOneId`=o.`id` AND p.`typeTwoId`=w.`id` AND p.`typeThreeId`=t.`id`
+    </select>
+
+    <select id="getPostByTypeOrAddress" resultType="Post" parameterType="String">
+    SELECT p.`postid`,p.`postname`,IF(p.`typeThreeId`=12,w.`name`,t.`name`) AS typeName,p.`describe`,
+    p.`postrecruit`,p.`posttime`,p.`request`,p.`typeOneId`,p.`typeTwoId`,p.`typeThreeId`,
+    ad.`name` AS address FROM post AS p,typeone AS o,typetwo AS w,typethree AS t,address AS ad
+    WHERE p.`typeOneId`=o.`id`AND p.`typeTwoId`=w.`id` AND p.`typeThreeId`=t.`id` AND
+    ad.id=p.address
+    <trim prefixOverrides="and">
+      <if test="type!=null">
+         <if test="levelType==0">
+             and p.`typeOneId`=#{type}
+         </if>
+          <if test="levelType==2">
+              and p.`typeTwoId`=#{type}
+          </if>
+          <if test="levelType==4">
+              and p.`typeThreeId`=#{type}
+          </if>
+      </if>
+    <if test="address!=null">
+        and p.address=#{address}
+    </if>
+    </trim>
+    </select>
+    <select id="selectYingBytage" parameterType="String" resultType="Post">
+       SELECT p.`postid`,p.`postname`,IF(p.`typeThreeId`=12,w.`name`,t.`name`) AS
+        typeName,p.`describe`,p.`postrecruit`,p.`posttime`,p.`request`,p.`typeOneId`,
+        p.`typeTwoId`,p.`typeThreeId`,ad.`name` AS address FROM post AS p,typeone AS
+         o,typetwo AS w,typethree AS t,address AS ad WHERE p.`typeOneId`=o.`id`AND
+          p.`typeTwoId`=w.`id` AND p.`typeThreeId`=t.`id` AND ad.id=p.address
+      <trim prefixOverrides="and" suffixOverrides="and" prefix="and"  >
+          <if test="typeId!=null">
+              <if test="levle==0">
+                  and p.`typeOneId`=#{typeId}
+              </if>
+              <if test="levle==2">
+                  and p.`typeTwoId`=#{typeId}
+              </if>
+              <if test="levle==4">
+                  and p.`typeThreeId`=#{typeId}
+              </if>
+          </if>
+          <if test="address!=null">
+              and p.address=#{address}
+          </if>
+      </trim>
+        LIMIT #{pageno},#{pagesize}
+    </select>
+
+    <select id="countYing" resultType="int">
+        SELECT count(*) FROM post p
+        <trim prefix="where" prefixOverrides="and">
+            <if test="typeId!=null">
+                <if test="level==0">
+                    and  p.`typeOneId`=#{typeId}
+                </if>
+                <if test="level==2">
+                    and p.`typeTwoId`=#{typeId}
+                </if>
+
+                <if test="level==4">
+                    and p.`typeThreeId`=#{typeId}
+                </if>
+            </if>
+            <if test="addressId!=null">
+                and p.address=#{addressId}
+            </if>
+        </trim>
+
+    </select>
+</mapper>
