@@ -6,10 +6,10 @@
   <head>
     <title>途家首页</title>
   <!DOCTYPE html>
-  <script type="text/javascript" src="js/index.js"></script>
-  <link rel="stylesheet" href="css/index.css" type="text/css"></link>
+  <script type="text/javascript" src="/statics/js/index.js"></script>
+  <link rel="stylesheet" href="/statics/css/index.css" type="text/css"></link>
 
-  <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
   <script type="text/javascript">
   $(function(){
   $("#d,#z").css({"color":"white","font-size":"12px"}).mouseover(function(){
@@ -19,7 +19,7 @@
 	});  
   });
   </script>
-  <script type="text/javascript" src="js/sweetalert.min.js"></script></head>
+  <script type="text/javascript" src="/statics/js/sweetalert.min.js"></script></head>
   
   <body><br>
   <br><html>
@@ -29,35 +29,35 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="/statics/js/index.js" ></script>
 		
 	</head>
 
 	<body>
 		<div id="bei">
-			<img src="img/10772600_themes_tujia_img_homebanner.jpg" />
+			<img src="/statics/img/10772600_themes_tujia_img_homebanner.jpg" />
 		</div>
 		<div id="xia">
 			<div id="aa">
 
-				<div id="dong"><img src="img/10772600_themes_tujia_img_fangzi.png" /></div>
+				<div id="dong"><img src="/statics/img/10772600_themes_tujia_img_fangzi.png" /></div>
 			</div>
-			<a id="login" href="#" style="width: 140px;margin-left: 190px"> <img src="img/2019-08-03_1324261.png" /></a>
+			<a id="login" href="#" style="width: 140px;margin-left: 190px"> <img src="/statics/img/2019-08-03_1324261.png" /></a>
 			<ul>
-				<li style="background: url(img/bai0.png)no-repeat;">
+				<li style="background: url(/statics/img/bai0.png)no-repeat;">
 					<a>首页</a>
 					<p>Home</p>
 				</li>
-				<li style="background: url(img/bai1.png) no-repeat;">
-					<a href="PostServlet">社会招聘</a>
+				<li style="background: url(/statics/img/bai1.png) no-repeat;">
+					<a href="/post/selectAll.html">社会招聘</a>
 					<p>Social</p>
 				</li>
-				<li style="background: url(img/bai2.png) no-repeat;">
+				<li style="background: url(/statics/img/bai2.png) no-repeat;">
 					<a>校园招聘</a>
 					<p>Canpus</p>
 				</li>
-				<li style="background: url(img/bai3.png) no-repeat;"> 
+				<li style="background: url(/statics/img/bai3.png) no-repeat;">
 					<a href="ZhuYe.jsp">关于我们</a>
 					<p>About</p>
 				</li>

@@ -21,7 +21,6 @@ public class PostServiceImpl implements PostService {
     @Override
     public int getPostCount(){
         int count = 0;
-
         try {
             count = postDao.getPostCount();
         } catch (Exception e) {
@@ -34,26 +33,30 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> getPostByTypeOrAddress(String type, String address, int levelType) {
-        return null;
+        return postDao.getPostByTypeOrAddress(type,address,levelType);
     }
 
     @Override
     public void fengyePage(PageYing pageYing, String typeId, String address, int levle) {
-
+        System.out.println("typeId"+typeId+"address"+address+"levle"+levle);
+        int size=postDao.countYing(typeId,address,levle);
+        pageYing.setTotalCount(size);
+        List<Post> list=postDao.selectYingBytage((pageYing.getPageNo()-1)*5, pageYing.getPagesize(),typeId,address,levle);
+        pageYing.setYings(list);
     }
 
     @Override
     public int insertPost(Post post) {
-        return 0;
+        return postDao.insertPost(post);
     }
 
     @Override
     public int updatePost(Post post) {
-        return 0;
+        return postDao.updatePost(post);
     }
 
     @Override
     public int deletepost(int id) {
-        return 0;
+        return postDao.deletepost(id);
     }
 }

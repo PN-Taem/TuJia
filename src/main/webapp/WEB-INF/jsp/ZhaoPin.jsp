@@ -69,7 +69,7 @@
 	<div class="zuida1" style="border:0px solid black;">
 		<div class="zuida2">
 			<div class="zuida3">
-				<form action="PostServlet" method="get">
+				<form action="/post/selectAll.html" method="post">
 					<input type="hidden" name="opr" value="sou" /> <input
 						type="hidden" name="souName" value="" /> <input type="hidden"
 						name="yourNameIndex" value="0" /> <select name="yourName"
@@ -83,8 +83,8 @@
 					</select> <input type="hidden" name="addressNameIndex" value="0" /> <select
 						name="addressName" id="yourId2">
 						<option value="-1">请输入工作地点</option>
-						<c:forEach items="${addressList }" var="a">
-							<option value="${a.id}">${a.address}</option>
+						<c:forEach items="${addressList}" var="address">
+							<option value="${address.id}">${address.name}</option>
 						</c:forEach>
 
 					</select> <input value="搜索" type="submit" class="sousuo" />
@@ -101,7 +101,7 @@
 						</ol>
 
 					</h1>
-					<c:forEach items="${postList}" var="po">
+					<c:forEach items="${posts.yings}" var="po">
 						<ul>
 							<li>
 								<h1 class="zuida7">
@@ -125,8 +125,7 @@
 											<span class="di6">任职要求:</span>
 											<div class="limian2">${po.request}</div>
 										</div>
-										
-										
+
 												<form action="" id="lian" method="post" class="lijs">
 												<input type="hidden" name="posid" value="${po.postid}"/>
 													<input type="submit" value="立即投稿" class="lij" id="tou" />
@@ -141,18 +140,18 @@
 						
 						<c:if test="${posts.pageNo!=1}">
 						<a
-							href="PostServlet?pageNo=1&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}" style="border:0px solid black;text-decoration: none ; color:black; margin-left: 0px">首页</a>
+							href="/post/selectAll.html?pageNo=1&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}" style="border:0px solid black;text-decoration: none ; color:black; margin-left: 0px">首页</a>
     					    </c:if>
 					<c:if test="${size!=0 }">
 						<c:if test="${posts.pageNo!=1}">
 							<a
-								href="PostServlet?pageNo=${posts.pageNo-1}&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}"style="border:0px solid black;text-decoration: none ; color:black;margin-left: 30px;">上一页</a>
+								href="/post/selectAll.html?pageNo=${posts.pageNo-1}&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}"style="border:0px solid black;text-decoration: none ; color:black;margin-left: 30px;">上一页</a>
     					    </c:if>
 						<c:if test="${posts.pageNo!=posts.totalPage}">
 							<a
-								href="PostServlet?pageNo=${posts.pageNo+1}&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}"style="border:0px solid black;text-decoration: none ; color:black;margin-left: 30px;">下一页</a>
+								href="/post/selectAll.html?pageNo=${posts.pageNo+1}&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}"style="border:0px solid black;text-decoration: none ; color:black;margin-left: 30px;">下一页</a>
 	    	   				<a
-								href="PostServlet?pageNo=${posts.totalPage}&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}"style="border:0px solid black;text-decoration: none ; color:black;margin-left: 30px;">尾页</a>
+								href="/post/selectAll.html?pageNo=${posts.totalPage}&yourName=${yourName }&addressName=${addressName }&souName=${souname }&addressNameIndex=${addressIndex}&yourNameIndex=${typeIndex}"style="border:0px solid black;text-decoration: none ; color:black;margin-left: 30px;">尾页</a>
 	    	   				</c:if>
 					</c:if>
 					

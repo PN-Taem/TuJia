@@ -2,7 +2,7 @@ package entity;
 
 public class Address {
 
-	private String address;  //µØÖ·
+	private String name;
  
 	private int id;
 	
@@ -15,17 +15,17 @@ public class Address {
 		this.id = id;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getName() {
+		return name;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return "Address [address=" + address + "]";
+		return "Address [address=" + name + "]";
 	}
 	 
 }

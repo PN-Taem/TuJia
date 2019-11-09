@@ -21,10 +21,37 @@
 					</list>
 				</property>
 			</bean>
+			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=utf-8</value>
+						<value>application/json;charset=utf-8</value>
+					</list>
+				</property>
+				<property name="features">
+					<list>
+						<value>WriteDateUseDateFormat</value>
+					</list>
+				</property>
+			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+
+	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<property name="favorParameter" value="true"/>
+		<property name="parameterName" value="format"/>
+		<property name="ignoreAcceptHeader" value="false"/>
+		<property name="mediaTypes">
+			<value>
+				json=application/json
+				xml=application/xml
+				html=text/html
+			</value>
+		</property>
+		<property name="defaultContentType" value="text/html"/>
+	</bean>
+
   
-	<!-- 完成视图的对应 -->
 	<!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 		<property name="prefix" value="/WEB-INF/jsp/"/>
@@ -34,6 +61,23 @@
 	<!--配置静态文件的引用-->
 	<mvc:resources mapping="/statics/**" location="/statics/"/>
 	<!--配置全局异常-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"/>
+		<property name="maxInMemorySize" value="5000000"/>
+	</bean>
+
+	<bean id="myConversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="tools.StringToDateConverter">
+					<constructor-arg>
+						<value>yyyy-MM-dd</value>
+					</constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!--配置全局异常-->
 	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
 			<props>
@@ -41,4 +85,5 @@
 			</props>
 		</property>
 	</bean>
+
 </beans>
