@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tujia" />
         <module name="TuJia" />
+        <module name="Tujia2.0" />
       </profile>
     </annotationProcessing>
   </component>

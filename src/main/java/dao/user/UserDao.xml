@@ -9,5 +9,10 @@ select * from `user` where phone=#{phone}
 <insert id="addUser" parameterType="user">
         INSERT INTO `user`(phone,pwd,email) VALUES(#{user.phone},#{user.pwd},#{user.email})
 </insert>
-
+        <update id="updatePwd">
+                UPDATE `user` SET pwd=#{pwd} WHERE phone=#{phone}
+        </update>
+        <update id="updateEmail">
+                UPDATE `user` SET email=#{email} WHERE phone=#{phone}
+        </update>
 </mapper>

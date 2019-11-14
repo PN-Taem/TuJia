@@ -55,7 +55,7 @@ body{
 }
 
 #lift ul li:first-child{
-	background-image: url(../img/applychoose.gif);
+	background-image: url(/statics/img/applychoose.gif);
 	background-repeat: no-repeat;
 }
 

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <%
 String path = request.getContextPath();
@@ -11,9 +11,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<head>
 		
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/jianli.css" />
+		<link rel="stylesheet" href="/statics/css/jianli.css" />
 		<title>我的简历</title>
-<script type="text/javascript" src="js/jquery-1.10.2.js" ></script>
+<script type="text/javascript" src="/statics/js/jquery-1.10.2.js" ></script>
 		<script type="text/javascript">
 		
 		</script>
@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<body>
 		<div id="head">
-			<img src="img/10772600_medias_logo11.png" id="img1" />
+			<img src="/statics/img/10772600_medias_logo11.png" id="img1" />
 			<div id="headnei">
 				<a>${user.name}</a>,欢迎你！
 				<span><a href="shouye.jsp" style="text-decoration: none; color:black;">招聘首页</a></span>
@@ -30,23 +30,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div id="lift">
 			<a id="tou" >个人中心
-				<img src="img/2019-08-13_083945.png" />
+				<img src="/statics/img/2019-08-13_083945.png" />
 			</a>
 
 			<ul>
-				<li><a href="shenqing.jsp" style="text-decoration: none; color: black;">我的申请</a></li>
+				<li><a href="/apply/shenQing.html" style="text-decoration: none; color: black;">我的申请</a></li>
 				<li>
 					<a style="color: white">我的简历</a>
 				</li>
-				
-				<li><a href="xiugai.jsp" style="text-decoration: none; color: black;">账户设置</a></li>
+
+				<li><a href="/apply/toXiuGai.html" style="text-decoration: none; color: black;">账户设置</a></li>
 			</ul>
 		</div>
 		<div id="zhu">
-			<span><img src="img/2019-08-13_141452.png"/></span>
+			<span><img src="/statics/img/2019-08-13_141452.png"/></span>
 
 			<span id="weiw">个人信息</span>
-			<span id="sp"><img src="img/2019-08-13_102754.png"/></span>
+			<span id="sp"><img src="/statics/img/2019-08-13_102754.png"/></span>
 			<ul>
 				<li><label>姓名：</label>
 					<span class="preview_text">${user.name}</span>

@@ -39,7 +39,6 @@
             function check() {
                 var phone = $("input[name='phone']").val();
                 var passWord = $("input[name='passWord']").val();
-                    alert(passWord);
                 var falg = true;
                 <!--登录-->
                 if (!TEL_phone.test(phone)) {

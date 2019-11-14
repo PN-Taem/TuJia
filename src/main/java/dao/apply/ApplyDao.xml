@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.apply.ApplyDao">
+<select id="selectAll" resultType="Apply">
+    select * from apply where phone=#{phone}
+</select>
+    <delete id="deleteApply" parameterType="int">
+        delete from apply where id=#{id}
+    </delete>
+    <insert id="addApply">
+        INSERT INTO apply VALUES(NULL,#{apply.postname},#{apply.address},'正常',#{apply.phone},#{apply.name},#{apply.sex},#{apply.birthday},#{apply.email},#{apply.userphone},#{apply.workday},#{apply.taty},#{apply.post},#{apply.city})
+    </insert>
+    <update id="updateAppky" >
+            UPDATE apply SET postname=#{apply.postname},address=#{apply.address},userphone=#{apply.userphone},name=#{apply.name},sex=#{apply.sex},birthday=#{apply.birthday},email=#{apply.email},workday=#{apply.workday},taty=#{apply.taty},post=#{apply.post},city=#{apply.city} where phone=#{apply.phone}
+    </update>
+</mapper>

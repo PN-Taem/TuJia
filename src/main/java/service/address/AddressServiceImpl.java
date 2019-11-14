@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-@Service("addressservice")
+@Service("addRessservice")
 public class AddressServiceImpl implements AddressService{
     @Resource
     private AddressDao addressDao;

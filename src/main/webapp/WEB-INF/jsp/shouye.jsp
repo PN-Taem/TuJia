@@ -49,7 +49,7 @@
 					<p>Home</p>
 				</li>
 				<li style="background: url(/statics/img/bai1.png) no-repeat;">
-					<a href="PostServlet">社会招聘</a>
+					<a href="/post/selectAll.html">社会招聘</a>
 					<p>Social</p>
 				</li>
 				<li style="background: url(/statics/img/bai2.png) no-repeat;">
@@ -65,15 +65,15 @@
 			<c:choose>
 			<c:when test="${loing==true}">
 
-			<a id="d" class="da" href="ApplysServlet" style="text-decoration: none;">个人中心</a>
+			<a id="d" class="da" href="/apply/toGeRen.html" style="text-decoration: none;">个人中心</a>
 				&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a id="z" class="da"href="UserServlet?opr=tui" style="text-decoration: none;">退出</a>
 			
 			</c:when>
 			<c:otherwise>
-			<a id="d" class="da" href="/user/login.html" style="text-decoration: none;">登录</a>
+			<a id="d" class="da" href="/login/login.html" style="text-decoration: none;">登录</a>
 				&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a id="z" class="da"href="/user/add.html" style="text-decoration: none;">注册</a>
+			<a id="z" class="da"href="/login/login.html" style="text-decoration: none;">注册</a>
 			</c:otherwise>
 			</c:choose>
 				

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false" %>
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -16,8 +16,8 @@
 			})
 		</script>
 		
-  <link rel="stylesheet" href="css/amdin1.css" type="text/css"></link>
-  <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+  <link rel="stylesheet" href="/statics/css/amdin1.css" type="text/css"></link>
+  <script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
   </head>
   
   <body>
@@ -28,7 +28,7 @@
 					<td>xxx,欢迎你</td>
 					
 					<td>
-						<a href="shouye.jsp">招聘首页</a>
+						<a href="/user/index.html">招聘首页</a>
 					</td>
 
 				</tr>
@@ -65,9 +65,13 @@
 			</form>
 			<div class="tow" style="background-color: white;"><input type="checkbox" />不用了，我自己填写</div>
 			<div class="div5"></div>
-			<input type="submit" value="继续" id="submit" />
+			<form action="/apply/caozuobao.html">
+			<input type="hidden" name="pid" value="${pid}">
+				<input type="hidden" name="caozuo" value="bao">
+			<input type="submit" value="继续" id="submit"/>
+			</form>
 		</div>
-		<div><img src="/statics/img/2019-08-08_152134.png" id="img2" /s></div>
+		<div><img src="/statics/img/2019-08-08_152134.png" id="img2" /></div>
 		<div><img src="/statics/img/2019-08-08_152417.png" id="img3" /></div>
 		<div id="div4">©2019 途家网网络技术（北京）有限公司 京ICP备05051632号 京公网安备 11010802020454号 帮助热线：4006506886</div>
 	</body>

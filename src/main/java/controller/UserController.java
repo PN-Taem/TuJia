@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import service.user.UserService;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
@@ -71,7 +72,7 @@ public class UserController {
 
     @RequestMapping(value ="/dophone",method = RequestMethod.POST)
     @ResponseBody
-    public boolean phone(HttpSession session,@RequestParam(value = "phone",required = false)String phone){
+    public Boolean phone(HttpSession session,@RequestParam(value = "phone",required = false)String phone){
         User u=userService.getUserByPhone(phone);
         System.out.println(u);
         if(u!=null){
@@ -82,5 +83,44 @@ public class UserController {
             return true;
         }
 
+    }
+
+    @RequestMapping(value = "qPhone",method = RequestMethod.POST)
+    @ResponseBody
+    public boolean yanPhone(String phone,String jpwd){
+        User user = userService.getUserByPhone(phone);
+        System.out.println(phone);
+        if (user.getPwd().equals(jpwd)) {
+           return false;
+        }else{
+           return true;
+        }
+
+    }
+
+    @RequestMapping(value = "xiugai",method = RequestMethod.POST)
+    @ResponseBody
+    public boolean xiuGai(HttpServletRequest request,HttpSession session){
+        String pwd=request.getParameter("passWord");
+        String phone=request.getParameter("phone");
+        System.out.println(pwd+"   "+phone);
+        int count=userService.updatePwd(pwd,phone);
+        if (count==1) {
+            session.setAttribute("user",null);
+            session.setAttribute("loing", false);
+          return true;
+        }else{
+            return false;
+        }
+    }
+    @RequestMapping(value = "upEmail",method = RequestMethod.POST)
+    @ResponseBody
+    public boolean upEmail(String email,String phone){
+        int count=userService.updateEmail(phone, email);
+        if (count==1) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }

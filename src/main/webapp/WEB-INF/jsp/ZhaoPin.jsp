@@ -126,10 +126,10 @@
 											<div class="limian2">${po.request}</div>
 										</div>
 
-												<form action="" id="lian" method="post" class="lijs">
+												<form action="/apply/tougao.html">
 												<input type="hidden" name="posid" value="${po.postid}"/>
 													<input type="submit" value="立即投稿" class="lij" id="tou" />
-												</form>
+										</form>
 										
 									</div>
 								</div></li>

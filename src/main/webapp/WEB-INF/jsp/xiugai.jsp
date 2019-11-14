@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -82,7 +82,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				height: 35px;
 				line-height: 35px;
 				border: 0px solid black;
-				background: url(img/settingchoose.gif) no-repeat;
+				background: url(/statics/img/settingchoose.gif) no-repeat;
 				margin-left: -22px;
 			}
 			#cen_div_left ul #imgLi a{
@@ -101,7 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				margin-left: 0px;
 				margin-top: 30px;
 				font-size: 18px;
-				background: url(img/dynamic_nav_bar_bg_mask.png) -16px 0px no-repeat;
+				background: url(/statics/img/dynamic_nav_bar_bg_mask.png) -16px 0px no-repeat;
 				height: 40px;
 				line-height: 40px;
 				text-indent: 20px;
@@ -142,8 +142,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				clear: left;
 			}
 		</style>
-	
-		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/statics/js/sweetalert.min.js"></script>
+		<script src="/statics/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
 					var TEL_phone = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
@@ -155,21 +155,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					//alert(jpwd);
 					var phone=$("input[name='phone']").val();
 					//alert(phone);
-					var url="UserServlet?opr=qPhone&phone="+phone+"&jpwd="+jpwd;
-					$.get(url,null,function(data){
-					if (data=='true') {
+
+					$.post("/user/qPhone",{"jpwd":jpwd,"phone":phone},function(data){
+					if (data==true) {
 					flag=false;
 					swal("提示", "原密码输入错误", "error");
 					}else{
 						flag=true;
 					}
-					})
+					},"json")
 				})
-				$("#xiu_email_form").submit(function(){
-					return check1();
+				$("#x_email").click(function(){
+					 check1();
 				})
-				$("#xiu_pwd_form").submit(function(){
-					return check2();
+				$("#q_pwd").click(function(){
+					var isok=check2();
+					if (isok) {
+						var phone=$("input[name='phone']").val();
+						var passWord=$("input[name='xpwd']").val();
+						$.post("/user/xiugai",{"passWord":passWord,"phone":phone},function (data) {
+							if (data==true) {
+								swal("提示", "修改成功，请重新登录", "error");
+								location.href="/login/login.html";
+							}else{
+								swal("提示", "修改失败", "error");
+							}
+						},"json")
+					}
 				})
 				
 				function check2(){
@@ -188,12 +200,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				return true;
 			}
 				function check1(){
-				var email=$("input[name='email']").val();
-				 if(!TEL_email.test(email)){
-					swal("提示", "邮箱格式不正确", "error");
-					return false;
+					var email=$("input[name='xEmail']").val();
+					var phone=$("input[name='phone']").val();
+					alert(email);
+					 if(!TEL_email.test(email)){
+						swal("提示", "邮箱格式不正确", "error");
+						return false;
+					}
+					$.post("/user/upEmail",{"email":email,"phone":phone},function (data) {
+						if (data==true){
+							swal("提示", "修改邮箱成功", "error");
+						} else{
+							swal("提示", "修改邮箱失败", "error");
+						}
+					},"json")
 				}
-			}
 				$("#xiu_email").click(function(){
 					$("#zi_1").hide();
 					$("#xiu_email_div").show();
@@ -212,11 +233,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				});
 			});
 		</script>
-	<script type="text/javascript" src="js/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="css/jianli.css" type="text/css"></link></head>
+	<script type="text/javascript" src="/statics/s/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="/statics/css/jianli.css" type="text/css"></link></head>
 	<body>
 		<div id="head">
-			<img src="img/10772600_medias_logo11.png" id="img1" />
+			<img src="/statics/img/10772600_medias_logo11.png" id="img1" />
 			<div id="headnei">
 				<a>${user.name}</a>,欢迎你！
 				<span><a href="shouye.jsp" style="text-decoration: none; color:black;">招聘首页</a></span>
@@ -229,8 +250,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>账户设置</p>
 				<hr  style="width: 40px; margin-left: 100px; margin-top: -1px; color: gainsboro;"/>
 				<ul>
-					<li><a href="shenqing.jsp">我的申请</a></li>
-					<li><a href="Jianli.jsp">我的简历</a></li>
+					<li><a href="/apply/shenQing.html">我的申请</a></li>
+					<li><a href="/apply/toJianLi.html">我的简历</a></li>
 					<li id="imgLi"><a href="#">账户设置</a></li>
 				</ul>
 			</div>
@@ -262,17 +283,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				
 					<div id="xiu_email_div" style="display: none;">
-						<form action="UserServlet?opr=xiuEmail" method="post" id="xiu_email_form">
+						<form action="" method="post" id="xiu_email_form">
 							邮箱:&nbsp;&nbsp;&nbsp;
 							<input type="hidden" value="${user.phone }"name="phone"/>
 							<input type="text" name="xEmail"  placeholder="请输入新邮箱"/>
-							<input type="submit"  id="x_email" value="确认" style="margin-left: 100px;"/>
+							<input type="button"  id="x_email" value="确认" style="margin-left: 100px;"/>
 							<input type="reset" name="qx_email" id="qx_email" value="取消" style="margin-left: 20px;"/>
 						</form>
 					</div>
 					
 					<div id="xiu_pwd_div" style="display: none;">
-						<form action="UserServlet?opr=xiuPhone" method="post" id="xiu_pwd_form">
+						<form action="" method="post" id="xiu_pwd_form">
 						<input type="hidden" value="${user.phone }" name="phone"/>
 							<span>手机号：${user.phone }</span>
 							<br /><br />
@@ -285,7 +306,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							确认密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="password" value="" placeholder="请确认密码"name="qpwd"/>
 							<br /><br />
-							<input type="submit" name="q_pwd" id="q_pwd" value="确认" style="margin-left: 100px;"/>
+							<input type="button" name="q_pwd" id="q_pwd" value="确认" style="margin-left: 100px;"/>
 							<input type="reset" name="qx_pwd" id="qx_pwd" value="取消" style="margin-left: 20px;"/>
 						</form>
 					</div>

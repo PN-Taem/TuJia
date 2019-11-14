@@ -13,7 +13,7 @@ public interface UserDao {
 	
 	int updeteuser(User user);
 	
-	int updateEmail(String Phone, String email);
+	int updateEmail(@Param("phone")String phone,@Param("email") String email);
 	
-	int updatePwd(String pwd, String phone);
+	int updatePwd(@Param("pwd") String pwd, @Param("phone") String phone);
 }
