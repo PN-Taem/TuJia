@@ -25,7 +25,7 @@
 				location.href="HouTaiServlet";
 			}
 		});
-  		});
+  			});
   		});
   		</script>
   <link rel="stylesheet" href="css/add.css" type="text/css">

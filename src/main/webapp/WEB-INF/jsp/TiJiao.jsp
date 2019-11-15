@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 				<div class="geren2">
 					   <div class="geren3">
-					   	<span class="userName">137****1903></span>
+					   	<span class="userName">137****1903</span>
 						 <span class="il8n">,欢迎您!</span>
 						 <span class="pad3">
 						 	<a href="shouye.jsp" class="il8n">招聘首页</a>

@@ -41,14 +41,14 @@
 			<table>
 				<ul id="table2">
 					<li id="content">
-						<a class="bg" href="admin.html" style="color: rgb(51,51,51);">我的申请</a>
+						<a class="bg" href="/apply/toGeRen.html" style="color: rgb(51,51,51);">我的申请</a>
 					</li>
 					<li>
-						<a class="bg" href="amdin1.html" style="color: rgb(51,51,51);">我的简历</a>
+						<a class="bg" href="/apply/toJianLi.html" style="color: rgb(51,51,51);">我的简历</a>
 					</li>
 					
 					<li>
-						<a class="bg"  href="amdin3.html" style="color: rgb(51,51,51);">账户设置</a>
+						<a class="bg"  href="/apply/toXiuGai.html" style="color: rgb(51,51,51);">账户设置</a>
 					</li>
 				</ul>
 

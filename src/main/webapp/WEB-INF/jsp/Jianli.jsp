@@ -24,8 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<img src="/statics/img/10772600_medias_logo11.png" id="img1" />
 			<div id="headnei">
 				<a>${user.name}</a>,欢迎你！
-				<span><a href="shouye.jsp" style="text-decoration: none; color:black;">招聘首页</a></span>
-				<span><a href="UserServlet?opr=tui"  style="text-decoration: none;">退出</a></span>
+				<span><a href="/user/index.html" style="text-decoration: none; color:black;">招聘首页</a></span>
+				<span><a href="/user/exitUser.html"  style="text-decoration: none;">退出</a></span>
 			</div>
 		</div>
 		<div id="lift">

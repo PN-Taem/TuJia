@@ -99,10 +99,10 @@
         <div class="geren2">
             <div class="geren3">
                 <span class="userName">${user.name}</span> <span class="il8n">,欢迎您!</span>
-                <span class="pad3"> <a href=" " class="il8n">招聘首页</a> </span> <em
-                    class="gg1">|</em> <span class="pad3"> <a href="ApplysServlet" class="il8n">个人中心</a> </span> <em
+                <span class="pad3"> <a href="/user/index.html" class="il8n">招聘首页</a> </span> <em
+                    class="gg1">|</em> <span class="pad3"> <a href="/apply/toGeRen.html" class="il8n">个人中心</a> </span> <em
                     class="gg1">|</em> <span class="pad3"></span>
-                <a href="UserServlet?opr=tui" class="il8n" style="text-decoration: none;">退出</a>
+                <a href="/user/exitUser.html" class="il8n" style="text-decoration: none;">退出</a>
             </div>
         </div>
     </div>

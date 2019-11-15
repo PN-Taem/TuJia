@@ -17,6 +17,7 @@ import service.post.PostService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.PrintWriter;
 import java.util.List;
 
 @Controller
@@ -138,5 +139,50 @@ public class ApplyController {
     @RequestMapping("shenQing.html")
     public String shenQing(){
         return "shenqing";
+    }
+
+    @RequestMapping(value = "/xiuApy.html")
+    public String xiuApy(HttpServletRequest request,HttpSession session){
+        User user = (User) request.getSession().getAttribute("user");
+        List<Apply> list = applyService.selectAll(user.getPhone());
+       String id = request.getParameter("userIdu");
+
+        Apply a = new Apply();
+        for (Apply apply2 : list) {
+            if (apply2.getId() == Integer.parseInt(id)) {
+
+                a.setAddress(apply2.getAddress());
+                a.setBirthday(apply2.getBirthday());
+                a.setCity(apply2.getCity());
+                a.setEmail(apply2.getEmail());
+                a.setId(apply2.getId());
+                a.setName(apply2.getName());
+                a.setPhone(apply2.getPhone());
+                a.setPost(apply2.getPost());
+                a.setPostname(apply2.getPostname());
+                a.setSex(apply2.getSex());
+                a.setState(apply2.getState());
+                a.setTaty(apply2.getTaty());
+                a.setUserphone(apply2.getUserphone());
+                a.setWorkday(apply2.getWorkday());
+                System.out.println(a.toString());
+                session.setAttribute("applyu", a);
+                return "GeRen";
+            }
+        }
+
+        return "";
+    }
+
+    @RequestMapping(value = "/delApy.html")
+    public String delApy(HttpServletRequest request, HttpSession session){
+        String did=request.getParameter("userIdd");
+        User user = (User) request.getSession().getAttribute("user");
+        int count = applyService.deleteApply(Integer.parseInt(did));
+        if (count == 1) {
+            return "redirect:/apply/toGeRen.html";
+        } else {
+            return "redirect:/apply/toGeRen.html";
+        }
     }
 }

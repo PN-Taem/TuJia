@@ -51,14 +51,14 @@
 						<li>${a.postname}</li>
 						<li>${a.address}</li>
 						<li>${a.state}</li>
-						<li><a href="ApplysServlet?opr=update&userIdu=${a.id}&caozuo=xiu" style="text-decoration: none;color: blue;">继续申请</a></li>
-						<li><a href="ApplysServlet?opr=delete&userIdd=${a.id}" onclick="return confirm('确定删除么?');" style="text-decoration: none;color: blue;">放弃申请</a></li>
+						<li><a href="/apply/xiuApy.html?userIdu=${a.id}" style="text-decoration: none;color: blue;">继续申请</a></li>
+						<li><a href="/apply/delApy.html?userIdd=${a.id}" onclick="return confirm('确定删除么?');" style="text-decoration: none;color: blue;">放弃申请</a></li>
 				</c:forEach>
 				</ul>
 				
 			</c:otherwise>
 		</c:choose>
-		<a id="cha" href="PostServlet"style="text-decoration: none;">查看更多职位</a>
+		<a id="cha" href="/post/selectAll.html"style="text-decoration: none;">查看更多职位</a>
 	</div>
 </body>
 

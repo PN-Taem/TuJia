@@ -16,7 +16,7 @@
 				<tr>
 					<td>xxx,欢迎你</td>
 					<td>
-						<a href="shouye.jsp">招聘首页</a>
+						<a href="/user/index.html">招聘首页</a>
 					</td>
 
 				</tr>
@@ -29,16 +29,16 @@
 			<table>
 				<ul id="table2">
 					<li id="content">
-						<a class="bg" href="admin.html" style="color: rgb(51,51,51);">我的申请</a>
+						<a class="bg" href="/apply/toGeRen.html" style="color: rgb(51,51,51);">我的申请</a>
 					</li>
 					<li>
-						<a class="bg" href="amdin1.html" style="color: rgb(51,51,51);">我的简历</a>
+						<a class="bg" href="/apply/toGeRen.html" style="color: rgb(51,51,51);">我的简历</a>
 					</li>
 					<li>
-						<a class="bg" href="admin2.html" style="color: rgb(51,51,51);">已收藏职位</a>
+						<a class="bg" href="/apply/toGeRen.html" style="color: rgb(51,51,51);">已收藏职位</a>
 					</li>
 					<li>
-						<a class="bg"  href="amdin3.html" style="color: rgb(51,51,51);">账户设置</a>
+						<a class="bg"  href="/apply/toGeRen.html" style="color: rgb(51,51,51);">账户设置</a>
 					</li>
 				</ul>
 
@@ -50,7 +50,7 @@
 				您目前没有收藏任何职位
 			</div>
 			<hr id="h10">
-				<a href="#" id="div22">查看更多职位>></a>
+				<a href="/post/selectAll.html" id="div22">查看更多职位>></a>
 		</div>
 		<div id="div4">©2019 途家网网络技术（北京）有限公司 京ICP备05051632号 京公网安备 11010802020454号 帮助热线：4006506886</div>
 	</body>

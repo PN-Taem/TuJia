@@ -64,9 +64,9 @@
 			<div id="head_tou">
 				<img src="/statics/img/10772600_medias_logo11.png" width="120"/>
 				<ul>
-					<li><a href="shouye.jsp">招聘首页&nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
-					<li><a href="index.jsp">登录&nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
-					<li><a href="add.jsp">注册</a></li>
+					<li><a href="/user/index.html">招聘首页&nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
+					<li><a href="/user/doLogin">登录&nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
+					<li><a href="/user/doLogin">注册</a></li>
 				</ul>
 			</div>
 
@@ -84,7 +84,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<br />
 				<input type="button" value="登录" id="zhuce"/>
-
+				</form>
 			</div>
 		</div>
 	</body>

@@ -57,10 +57,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>	
 				<img src="img/pn-31.png" width="130px" height="35px" class="herimg1" style="margin-left: 0px"/>
 				<div class="heaimg">
-					<a href="shouye.jsp"><img src="img/pn-282.png" class="herimg2"/>首页</a>
-				    <a href="PostServlet"><img src="img/pn-272.png" class="herimg3"/>社会招聘</a>
+					<a href="/user/index.html"><img src="img/pn-282.png" class="herimg2"/>首页</a>
+				    <a href="/post/selectAll.html"><img src="img/pn-272.png" class="herimg3"/>社会招聘</a>
 				    <a href=""><img src="img/pn-252.png" class="herimg4"/>校园招聘</a>
-				    <a ><img src="img/pn-292.png" class="herimg5"/>了解我们</a>
+				    <a ><img src="" class="herimg5"/>了解我们</a>
 				</div>
 			</div>
 		<div id="Ye">
@@ -71,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div id="nei1">
 				<img src="img/pn-11.png" class="img1"/>		
-				<img src="img/pn-13.png" class="img2"//>
+				<img src="img/pn-13.png" class="img2"/>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;途家，于2011年12月1日正式上线。作为全球民宿短租预订平台，致力为客户提供丰
 				富、优质、更个性的出行住宿体验，同时也为房东提供高收益且有保障的闲置房屋分享平 台。<br/> 
 　　                                        随着国内分享经济的逐步升温和途家预订业务的不断增长。2015年8月，途家网完成了

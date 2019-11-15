@@ -123,12 +123,12 @@
                 <em class="gg1">|</em>
 
                 <span class="pad3">
-						 	<a href="ApplysServlet" class="il8n">个人中心</a>
+						 	<a href="/apply/toGeRen.html" class="il8n">个人中心</a>
 						 </span>
                 <em class="gg1">|</em>
 
                 <span class="pad3">
-						 <a href="UserServlet?opr=tui" class="il8n" style="text-decoration: none;">退出</a>
+						 <a href="/user/exitUser.html" class="il8n" style="text-decoration: none;">退出</a>
 						 </span>
             </div>
         </div>

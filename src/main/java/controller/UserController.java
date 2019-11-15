@@ -123,4 +123,11 @@ public class UserController {
             return false;
         }
     }
+
+    @RequestMapping(value = "/exitUser.html")
+    public String exitUser(HttpSession session){
+        session.setAttribute("user",null);
+        session.setAttribute("loing", false);
+        return "shouye";
+    }
 }

@@ -55,8 +55,8 @@
 	<div id="header01">
 				<img src="/statics/img/pn-31.png" width="130px" height="35px" class="herimg1" style="margin-left: 0px"/>
 				<div class="heaimg">
-					<a href="shouye.jsp"><img src="/statics/img/pn-282.png" class="herimg2"/>首页</a>
-				    <a href="PostServlet"><img src="/statics/img/pn-272.png" class="herimg3"/>社会招聘</a>
+					<a href="/user/index.html"><img src="/statics/img/pn-282.png" class="herimg2"/>首页</a>
+				    <a href="/post/selectAll.html"><img src="/statics/img/pn-272.png" class="herimg3"/>社会招聘</a>
 				    <a href=""><img src="/statics/img/pn-252.png" class="herimg4"/>校园招聘</a>
 				    <a href="ZhuYe.jsp"><img src="/statics/img/pn-292.png" class="herimg5"/>了解我们</a>
 				</div>

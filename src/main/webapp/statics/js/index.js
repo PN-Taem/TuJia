@@ -22,7 +22,7 @@ $(function() {
 					t=$(this).index();//当前li下标
 					var count=$("ul li:last-of-type").index()+1;
 					var max=ii*count;
-					$(this).css("background","url(img/tu"+t+".png) no-repeat");
+					$(this).css("background","url(/statics/img/tu"+t+".png) no-repeat");
 					if(t==o){
 						return;
 					}
@@ -49,7 +49,7 @@ $(function() {
 						ii=142;
 						o=t;
 						var li=$(this).index();
-						$(this).css("background","url(img/bai"+li+".png) no-repeat");
+						$(this).css("background","url(/statics/img/bai"+li+".png) no-repeat");
 					})
 					
 				

@@ -7,8 +7,7 @@
     <title>途家首页</title>
   <!DOCTYPE html>
   <script type="text/javascript" src="/statics/js/index.js"></script>
-  <link rel="stylesheet" href="statics/css/index.css" type="text/css"></link>
-
+  <link rel="stylesheet" href="/statics/css/index.css" type="text/css"></link>
   <script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
   <script type="text/javascript">
   $(function(){
@@ -25,11 +24,11 @@
   <br><html>
 
 	<head>
-	
+
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="/statics/css/index.css"/>
-		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
 		<script type="text/javascript" src="/statics/js/index.js" ></script>
 	</head>
 
@@ -40,12 +39,12 @@
 		<div id="xia">
 			<div id="aa">
 
-				<div id="dong"><img src="statics/img/10772600_themes_tujia_img_fangzi.png" /></div>
+				<div id="dong"><img src="/statics/img/10772600_themes_tujia_img_fangzi.png" /></div>
 			</div>
 			<a id="login" href="#" style="width: 140px;margin-left: 190px"> <img src="/statics/img/2019-08-03_1324261.png" /></a>
 			<ul>
 				<li style="background: url(/statics/img/bai0.png)no-repeat;">
-					<a>首页</a>
+					<a href="/user/index.html">首页</a>
 					<p>Home</p>
 				</li>
 				<li style="background: url(/statics/img/bai1.png) no-repeat;">
@@ -67,7 +66,7 @@
 
 			<a id="d" class="da" href="/apply/toGeRen.html" style="text-decoration: none;">个人中心</a>
 				&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a id="z" class="da"href="UserServlet?opr=tui" style="text-decoration: none;">退出</a>
+			<a id="z" class="da"href="/user/exitUser.html" style="text-decoration: none;">退出</a>
 			
 			</c:when>
 			<c:otherwise>
